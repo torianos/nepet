@@ -2,16 +2,83 @@ $black: #2C323A;
 $white: #FFFFFF;
 $border: #EBEBEB;
 $lightgreen: #70D24E;
+$hovergreen: #4fd422;
 
 #app {
     padding: 80px;
     cursor: url('~@/assets/img/cursor/cursor.png') 4 12, auto;
     background-color: $black;
+    line-height: 28px;
+    font-size: 12px;
+    color: $black;
+    font-weight: bold;
+    font-family: "Gotham Pro", sans-serif;
+}
+button {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Gotham Pro", sans-serif;    
 }
 .main-body {
+    padding: 30px;
     border-radius: 10px;
     background-color: $white;
 }
+header {
+    height: 60px;
+    margin: 38px 0 50px 0;
+    text-transform: uppercase;
+    text-align: center;
+    h1 {
+        font-size: 34px;
+        line-height: 60px;
+    }
+}
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.select-rooms {
+
+}
+h4 {
+    line-height: 28px;
+    font-size: 12px;
+    margin: 0;
+    // text-transform: uppercase;
+ }
+.select-rooms-checkbox {
+    input{
+        display: none;
+    }
+    label {
+        display: inline-block;
+        width: 47px;
+        height: 40px;       
+        background: $white;
+        text-align: center;
+        line-height: 40px;
+        margin: 2px;
+        cursor: pointer;
+    }
+    span {
+        display: block;
+        border: 1px solid #D8D8D8;
+        border-radius: 5px;
+    }
+    input:checked+span {
+        background-color: $lightgreen;
+        border: 1px solid $lightgreen;
+        color: $white;
+    }
+    input:checked+span:hover {
+        background-color: $hovergreen}
+}
+
+////////////////////// GRID CARDS
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
@@ -23,12 +90,8 @@ $lightgreen: #70D24E;
     height: 365px;
     width: 270px;
     border-radius: 10px;
-    line-height: 28px;
-    font-size: 12px;
-    color: $black;
-    font-weight: bold;
-    font-family: "Gotham Pro", sans-serif;
     box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.05);
+    overflow: hidden;
 
 }
 .wrap-card:hover {
@@ -126,5 +189,124 @@ sup {
     cursor: pointer;
 }
 .footer-card-more:hover {
-    background: #4fd422;
+    background: $hovergreen;
+}
+
+
+//////// RANGE 
+.main-range {
+    width: 175px;
+    input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+}
+.range-input {
+width: 80px;
+height: 40px;
+background: $white;
+border: 1px solid #D8D8D8;
+box-sizing: border-box;
+border-radius: 5px;
+text-align: center;
+font-size: 16px;
+color: $black;
+font-family:"Gotham Pro", sans-serif; ;
+}
+.range-values {
+    margin-bottom: 12px;
+}
+.span-space {
+    width: 5px;
+    margin: 0 5px;
+}
+// SLIDER RANGE
+.multi-range-slider[data-v-cff044c2] {
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+.multi-range-slider .thumb[data-v-cff044c2]::before {
+    background-color: $lightgreen;
+    width: 16px;
+    height: 16px;
+    border: none; 
+    box-shadow: none;
+    border-radius: 50%;
+    z-index: 1;
+    margin: -4px;
+}
+.multi-range-slider .thumb[data-v-cff044c2]::after {
+    position: absolute;
+    content: "";
+    background-color: $white;
+    width: 24px;
+    height: 24px;
+    border: none; 
+    box-shadow: none;
+    border-radius: 50%;
+    z-index: 0;
+    margin: -8px;
+    cursor: pointer;
+}
+.multi-range-slider .bar-inner[data-v-cff044c2] {
+    background-color: $lightgreen;
+    border: none; 
+    box-shadow: none; 
+    height: 2px;
+    margin: 4px;
+}
+.multi-range-slider .bar-right[data-v-cff044c2] {
+    background-color: #D8D8D8;
+    border-radius: none; 
+    box-shadow: none;
+    height: 2px;
+    margin: 4px;
+}
+.multi-range-slider .bar-left[data-v-cff044c2] {
+    background-color: #D8D8D8;
+    box-shadow: none;
+    height: 2px;
+    margin: 4px;
+}
+.multi-range-slider .bar-left[data-v-cff044c2] {
+padding: 0px; 
+}
+.multi-range-slider .thumb *[data-v-cff044c2] {
+    display: none !important;
+}
+
+// BUTTONS 
+.options-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.startfilter {
+width: 201px;
+height: 40px;
+background: $lightgreen;
+border-radius: 5px;
+font-size: 14px;
+line-height: 40px;
+color: $white;
+border: none;
+text-transform: uppercase;
+display: block;
+margin-bottom: 5px;
+}
+.startfilter:hover {
+    background-color: $hovergreen;
+}
+
+.resetfilter {
+width: 114px;
+height: 28px;
+font-size: 10px;
+line-height: 28px;
+border: none;
+background-color: $white;
+border-bottom: 2px solid $lightgreen;
+text-transform: uppercase;
 }
