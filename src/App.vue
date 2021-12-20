@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Card msg="Welcome to Your Vue.js App"/>
+    <main class="main-body">
+    <div class="card-grid">
+      <div v-for="card in dataList" :key="card.id+card.building_id"><Card :card="card"/></div>
+    </div>  
+    </main>
   </div>
 </template>
 
 <script>
 import Card from './components/Card.vue'
-import Counter from '@/counterMixin'
+// import Counter from '@/counterMixin'
 
 export default {
   name: 'App',
-  mixins: [Counter],
+  // mixins: [Counter],
   components: {
     Card
   },
@@ -35,3 +38,6 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+  @import "./styles/style.scss";
+</style>

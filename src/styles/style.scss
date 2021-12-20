@@ -1,0 +1,130 @@
+$black: #2C323A;
+$white: #FFFFFF;
+$border: #EBEBEB;
+$lightgreen: #70D24E;
+
+#app {
+    padding: 80px;
+    cursor: url('~@/assets/img/cursor/cursor.png') 4 12, auto;
+    background-color: $black;
+}
+.main-body {
+    border-radius: 10px;
+    background-color: $white;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    justify-content:center;
+    gap: 30px;
+}
+
+.wrap-card {
+    height: 365px;
+    width: 270px;
+    border-radius: 10px;
+    line-height: 28px;
+    font-size: 12px;
+    color: $black;
+    font-weight: bold;
+    font-family: "Gotham Pro", sans-serif;
+    box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.05);
+
+}
+.wrap-card:hover {
+    box-shadow: 0px 5px 20px rgba(86, 86, 86, 0.25);
+    transition: all 0.3s ease;
+    .body-card {
+        height: 200px;
+        transition: all 0.3s ease;
+    }
+    .body-card-image {
+        width: 186px;
+        height: 152px;
+        transition: all 0.3s ease;
+    }
+    .footer-card-more {
+        display: block;
+    }
+}
+sup {
+    font-size: 8px;
+}
+.head-card {
+    height: 28px;
+    margin: 8px 15px 4px 15px;
+    display: flex;
+}
+.head-card-floor {
+    padding-top: 4px;
+    opacity: 0.5;
+    height: 24px;
+}
+.head-card-space {
+    margin: 0 10px;
+    width: 5px;
+}
+.head-card-rooms {
+    margin-left: auto;
+}
+
+
+.body-card {
+    width: 250px;
+    height: 250px;
+    margin: 0 10px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.body-card-number {
+    height: 30px;
+    width: 62px;
+    padding: 2px 10px 0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-left: auto;
+}
+.body-card-image {
+    margin: 0 auto 31px auto;
+    width: 230px;
+    height: 188px;
+    transition: all 0.3s ease;
+    img {
+        width:100%;
+        height: 100%;
+    }
+}
+
+
+.footer-card-price {
+    margin: 11px 15px 0 15px;
+    font-size: 20px;
+    text-align: right;
+}
+.footer-card-pricesquare {
+    margin: 0px 15px 10px 15px;
+    text-align: right;
+    opacity: 0.5;
+    height: 28px;
+}
+.footer-card-more {
+    display: none;
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+    text-transform: uppercase;
+    background: $lightgreen;
+    border-radius: 2px 2px 5px 5px;
+    color: $white;
+    text-align: center;
+    line-height: 40px;
+    border: none;
+    cursor: pointer;
+}
+.footer-card-more:hover {
+    background: #4fd422;
+}
