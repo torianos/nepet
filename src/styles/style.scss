@@ -14,6 +14,13 @@ $hovergreen: #4fd422;
     font-weight: bold;
     font-family: "Gotham Pro", sans-serif;
 }
+@media (max-width: 800px) {
+    #app {padding: 10px;}
+  }
+@media (max-width: 600px) {
+    #app {padding: 5px;}
+  }
+
 button {
     cursor: pointer;
     font-weight: bold;
@@ -25,7 +32,7 @@ button {
     background-color: $white;
 }
 header {
-    height: 60px;
+    // height: 60px;
     margin: 38px 0 50px 0;
     text-transform: uppercase;
     text-align: center;
